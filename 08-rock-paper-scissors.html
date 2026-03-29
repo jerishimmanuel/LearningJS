@@ -2,20 +2,31 @@
 <html>
     <head>
         <title>Rock Paper Scissors</title>
+        <style>
+            button {
+                padding: 10px;
+                margin: 5px;
+                font-size: 16px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+        </style>
     </head>
-    <body>
+    <body style="font-family: Arial, Helvetica, sans-serif;">
         <p>Rock Paper Scissors</p>
         <button onclick="
             playGame('rock');
-        ">Rock</button>
+        ">🪨 Rock</button>
         
         <button onclick="
             playGame('paper');
-        ">Paper</button>
+        ">📄 Paper</button>
 
         <button onclick="
            playGame('scissors');
-        ">Scissors</button>
+        ">✂️ Scissors</button>
 
         <button onclick="
             score.wins = 0;

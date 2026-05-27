@@ -40,9 +40,11 @@ document.querySelector('.js-scissors-button')
         playGame('scissors');
     });
 
+document.querySelector('.js-reset-score-button')
+    .addEventListener('click', resetScore);
+
 document.querySelector('.js-auto-play')
-    .addEventListener('click', autoPlay
-    );
+    .addEventListener('click', autoPlay);
 
 document.body.addEventListener('keydown', (event) => {
     if(event.key === 'r') {
@@ -53,6 +55,16 @@ document.body.addEventListener('keydown', (event) => {
         playGame('scissors');
     } 
 });
+
+function resetScore() {
+    score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    };
+    localStorage.setItem('score', JSON.stringify(score));
+    updateScoreElement();
+}
 
 function playGame(playerMove) {
     const computerMove = pickComputerMove();

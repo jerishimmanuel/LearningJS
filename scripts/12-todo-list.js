@@ -7,10 +7,9 @@ const todoList = [{
 renderTodoList();
 
 function renderTodoList() {
-    
     let todoListHTML = '';
 
-    todoList.forEach(function(todoObject, index) {
+    todoList.forEach((todoObject, index) => {
         //const todoObject = todoList[i];
         //const name = todoObject.name;
         // const dueDate = todoObject.dueDate;
@@ -45,8 +44,8 @@ function renderTodoList() {
         */
 
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
-
 }
+
 function addTodo() {
     const inputElement = document.querySelector('.js-name-input');
     const name = inputElement.value;

@@ -7,7 +7,6 @@ const todoList = [{
 renderTodoList();
 
 function renderTodoList() {
-    
     let todoListHTML = '';
 
     for(let i = 0; i < todoList.length; i++) {
